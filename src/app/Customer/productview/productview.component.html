@@ -1,0 +1,56 @@
+<!-- Team Start -->
+<div class="team">
+    <div class="container">
+        <div class="section-header text-center">
+            <p>Our Team</p>
+            <h2>Our Master Chef</h2>
+        </div>
+        <div class="row" >
+              
+                  <div class="col-md-3"></div>
+                    <div class="col-md-7">
+              <select class="form-control" [formControl]="Category_Control" (change)="onChange($event)"
+               style="width:600px; background-color: yellowgreen;color: white;"> 
+                                                
+                <option value="" >  Select Category </option>
+                <option *ngFor="let Category of categoryList" value="{{Category.catname}}">
+                 {{Category.catname}}
+                </option>
+            </select>
+        </div>
+            <!-- <div class="col-md-6">
+                <select class="form-control" [formControl]="Location_Control" (change)="onChangelocation($event)"
+               style="width:500px;background-color: yellowgreen;color: white;"> 
+                                                
+                <option value="" > Select Location </option>
+                <option *ngFor="let Location of locationList" value="{{Location.place_name}}">
+                 {{Location.place_name}}
+                </option>
+             </select>
+            </div> -->
+           
+            <br>
+            <div class="col-lg-3 col-md-6" *ngFor="let row of productList" style="margin-top: 5%;"> 
+                <div class="team-item">
+                    <p>{{row.date}}</p>
+                    <div class="team-img">
+                        <img  [src]="row.product_image" style="width:300px;height:300px;" alt="Image">
+                        <div class="team-social">
+                            <!-- <a href=""><i class="fab fa-twitter"></i></a>
+                            <a href=""><i class="fab fa-facebook-f"></i></a>
+                            <a href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a href=""><i class="fab fa-instagram"></i></a> -->
+                        </div>
+                    </div>
+                    <div class="team-text">
+                        <h2>₹{{row.product_amount}}</h2>
+                        <p>{{row.product_name}}</p>
+                        <p> <a [routerLink]="['/customermaster/viewmore',row.product_id,row.uid]" class="nav-link" href="pages/ui-features/buttons.html">Viewmore</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>    <!-- </form> -->
+       
+    </div>
+</div>
+<!-- Team End -->

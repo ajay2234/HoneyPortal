@@ -1,0 +1,216 @@
+<!-- <m!--,ain style="margin-left:20%;">
+    <div class="pagetitle">
+        <h1>Product Registration</h1>
+        <nav>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">Forms</li>
+            <li class="breadcrumb-item active">Flowers</li>
+          </ol>
+        </nav>
+      </div>
+    
+      <section class="section">
+        <div class="row">
+          <div class="col-lg-8">
+    
+            <div class="card" style="width: 260%;">
+              <div class="card-body">
+                
+    
+                
+                <form [formGroup]='productForm'>
+                  <div class="row mb-3">
+                    <label for="inputText" class="col-sm-4 col-form-label">Category</label>
+                  <select class="form-control" formControlName="cat_name">
+                    <option value="">-- Select Category --</option>
+                    <option *ngFor="let Category of categoryList" value="{{Category.id}}">
+                     {{Category.cat_name}}
+                    </option>
+                  </select>
+                </div> -->
+
+                <!-- <div class="row mb-3">
+                  <label for="inputText" class="col-sm-4 col-form-label">Wood Type</label>
+                <select class="form-control" formControlName="woodtype">
+                  <option value="">-- Select Wood Type --</option>
+                  <option *ngFor="let woodtype of woodtypeList" value="{{woodtype.id}}">
+                   {{woodtype.wood_type}}
+                  </option>
+                </select>
+              </div> -->
+                  
+                  <!-- <div class="row mb-3">
+                    <label for="inputText" class="col-sm-4 col-form-label">Product Name</label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control" formControlName='product_name'>
+                    </div>
+                  </div>
+                
+                  <div class="row mb-3">
+                    <label for="inputText" class="col-sm-4 col-form-label">Description</label>
+                    <div class="col-sm-6">
+                        <textarea class="form-control" style="height: 100px" formControlName='product_description'></textarea>
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <label for="inputPassword"  class="col-sm-4 col-form-label">Image</label>
+                      <div class="col-sm-6">
+                        <input type="file" class="form-control"  id="file" 
+                        (change)="handleFileInput($event)">
+                      </div>
+                    </div> -->
+      
+                    <!-- <div class="row mb-3">
+                      <label for="inputText" class="col-sm-4 col-form-label">Available Count</label>
+                      <div class="col-sm-6">
+                        <textarea class="form-control" style="height: 100px" formControlName='product_count'></textarea>
+                      </div>
+                    </div> -->
+      
+                    <!-- <div class="row mb-3">
+                      <label for="inputText" class="col-sm-4 col-form-label">Product Amount</label>
+                      <div class="col-sm-6">
+                        <textarea class="form-control" style="height: 100px" formControlName='product_amount'></textarea>
+                      </div>
+                    </div>
+      
+                    <div class="row mb-3">
+                      
+                      <div class="col-sm-10">
+                        <button type="submit" class="btn btn-primary" (click)="saveProduct()">Save</button>
+                      </div>
+                    </div>
+      
+                  </form>
+      
+                </div>
+              </div>
+              </div>
+              </div>
+        </section>
+      </m!--,ain> -->
+
+
+
+
+
+
+
+
+      <section class="application-form spad">
+        <div class="container">
+
+
+
+            <div class="booking" >
+                <div class="container" >
+                    <div class="row align-items-center" >
+                        <!-- <div class="col-lg-7"> -->
+                            <div class="booking-content" style="text-align:center;">
+                                <div class="section-header">
+                                    <!-- <p>Book A Table</p> -->
+                                    <h2 >Product Registration</h2>
+                                </div>
+                                <div class="about-text">
+                                    
+                                   
+                                </div>
+                            </div>
+                        <!-- </div> -->
+                        <!-- <div class="row"> -->
+                            <!-- <div class="col-lg-3"></div> -->
+                       
+                            <div class="col-lg-10 " >
+                            <div class="booking-form" style="margin-left: 20%;" >
+                                <form [formGroup]='productForm'>
+                                    <div class="control-group">
+                                        <div class="input-group ">
+                                            <select class="form-control" formControlName="cat_name" > 
+                                                
+                                                <option value="" > -- Select Category --</option>
+                                                <option *ngFor="let Category of categoryList" value="{{Category.catname}}">
+                                                 {{Category.catname}}
+                                                </option>
+                                            </select>
+                                            </div>
+                                        </div>
+                                    
+                                    <div class="control-group">
+                                        <div class="input-group">
+                                            <input type="text"  placeholder =" Product Name"class="form-control" formControlName='product_name'>
+                                       
+                                            
+                                            <div class="input-group-append">
+                                              <div class="input-group-text"><i class='fa fa-product-hunt'></i></div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <label *ngIf="productForm.controls['product_name'].errors['required'] && savestatus" class="text-danger">*enter valid data</label>
+                                    <div class="control-group">
+                                        <div class="input-group">
+                                            <textarea class="form-control" placeholder =" Product Description"style="height: 100px" formControlName='product_description'></textarea>
+                                            <div class="input-group-append">
+                                                <div class="input-group-text"><i class='fa fa-audio-description'></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                      <div class="input-group">
+                                          <input type="date"  placeholder ="Date"class="form-control" formControlName='date'>
+                                          <div class="input-group-append">
+                                              <div class="input-group-text"></div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                    <div class="control-group">
+                                        <div class="input-group" >
+                                            <input type="file" class="form-control"  id="file" 
+                        (change)="handleFileInput($event)">
+                                            <div class="input-group-append">
+                                                <div class="input-group-text"><i class='fa fa-image'></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <div class="input-group">
+                                            <input type="number" class="form-control"  placeholder =" Product count"  formControlName='product_count'/>
+                                           
+                                            <div class="input-group-append">
+                                                <div class="input-group-text"><i class='fa fa-plus'></i></div>
+                                           
+                                                
+                                              </div>
+                                            </div>
+                                            <label *ngIf="productForm.controls['product_count'].errors['required'] && savestatus" class="text-danger">*enter valid data</label>
+                                    </div>
+                                    <div class="control-group">
+                                        <div class="input-group">
+                                            <input type="number" class="form-control" placeholder =" Product Amount"  formControlName='product_amount'/>
+                                            <div class="input-group-append">
+                                                <div class="input-group-text"><i class='fa fa-bank'></i></div>
+                                                
+                                              </div>
+                                            </div>
+                                            <label *ngIf="productForm.controls['product_amount'].errors['required'] && savestatus" class="text-danger">*enter valid data</label>
+                                    </div>
+                                    
+                    
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <button type="submit" class="btn btn-primary" (click)="saveProduct()">Save</button>
+                                    </div>
+                                    </div>
+                                </form>
+                                
+                            </div>
+                        <!-- </div> -->
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+        

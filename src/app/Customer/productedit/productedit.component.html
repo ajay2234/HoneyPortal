@@ -1,0 +1,251 @@
+<!-- <main id="main" class="main"> <br> <br> <br>
+    <div class="container" style="margin-left: 18%">
+        <div class="row">
+            <div class="col-md-11" style="box-shadow: 2px 2px 10px #1b93e1; border-radius: 20px; top: 30px">
+                <h3 style="text-align: center; margin-top: 4%; margin-bottom: 4%"> <b>EDIT PRODUCT REGISTRATION</b>
+                </h3>
+                <form [formGroup]="producteditform">
+                    <div class="form-horizontal" style="margin-left: 10%">
+                        <div class="row">
+                            <div class="col-sm-10"> <label class="control-label col-sm-2" for="society">Category Name</label>
+                                <div class="col-sm-10"> <select class="form-control" formControlName="cat_name"
+                                        (change)="onChange($event)">
+                                        <option value="">-- Select Category --</option>
+                                        <option *ngFor="let cat of categorylist" value="{{ cat.id}}">
+                                            {{cat.cat_name}} </option>
+                                    </select> </div>
+                            </div>
+                            <div class="col-sm-10"> <label class="control-label col-sm-2" for="society">Product Name</label>
+                                <div class="col-sm-10"> <input type="text" class="form-control"
+                                        formControlName="product_name" placeholder="Enter the Product" /> </div>
+                            </div>
+                            <div>
+                                <label class="form-label">Product Image</label><br>
+                                <input type="file" id="filep" class="fadeIn third" name="product_image"
+                                    (change)="handleFileInput($event)" placeholder="Description">
+                            </div>
+                            <div class="col-sm-10"> <label class="control-label col-sm-2" for="society">Product Description</label>
+                                <div class="col-sm-10"> <input type="text" class="form-control"
+                                        formControlName="product_description" placeholder="Enter the Product Description" />
+                                </div>
+                            </div>
+                            <div class="col-sm-10">
+                                <label class="control-label col-sm-2" for="society">Product Count</label>
+                                <textarea class="form-control"  placeholder =" Product_count" style="height: 100px" formControlName='product_count'></textarea>
+                                <div class="input-group-append">
+                                    <div class="input-group-text"><i class='fa fa-plus'></i></div>
+                                </div>
+                            <div class="col-sm-10"> <label class="control-label col-sm-2" for="society">Product Price</label>
+                                <div class="col-sm-10"> <input type="text" class="form-control" formControlName="product_amount"
+                                        placeholder="Enter the Product Price" /> </div>
+                            </div>
+                        </div>
+                    </div> <br />
+                    <div class="row">
+                        <div class="col-sm-6"> <input type="submit" (click)="edit()" value="Register In"
+                                class="btn btn-block py-2 btn-primary">
+                            <a routerLink="/customermaste/customerhome">Cancel</a>
+                        </div>
+                    </div> <br>
+                    </div>
+            
+     -->
+     <!-- <m!--,ain style="margin-left:20%;">
+    <div class="pagetitle">
+        <h1>Product Registration</h1>
+        <nav>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">Forms</li>
+            <li class="breadcrumb-item active">Flowers</li>
+          </ol>
+        </nav>
+      </div>
+    
+      <section class="section">
+        <div class="row">
+          <div class="col-lg-8">
+    
+            <div class="card" style="width: 260%;">
+              <div class="card-body">
+                
+    
+                
+                <form [formGroup]='productForm'>
+                  <div class="row mb-3">
+                    <label for="inputText" class="col-sm-4 col-form-label">Category</label>
+                  <select class="form-control" formControlName="cat_name">
+                    <option value="">-- Select Category --</option>
+                    <option *ngFor="let Category of categoryList" value="{{Category.id}}">
+                     {{Category.cat_name}}
+                    </option>
+                  </select>
+                </div> -->
+
+                <!-- <div class="row mb-3">
+                  <label for="inputText" class="col-sm-4 col-form-label">Wood Type</label>
+                <select class="form-control" formControlName="woodtype">
+                  <option value="">-- Select Wood Type --</option>
+                  <option *ngFor="let woodtype of woodtypeList" value="{{woodtype.id}}">
+                   {{woodtype.wood_type}}
+                  </option>
+                </select>
+              </div> -->
+                  
+                  <!-- <div class="row mb-3">
+                    <label for="inputText" class="col-sm-4 col-form-label">Product Name</label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control" formControlName='product_name'>
+                    </div>
+                  </div>
+                
+                  <div class="row mb-3">
+                    <label for="inputText" class="col-sm-4 col-form-label">Description</label>
+                    <div class="col-sm-6">
+                        <textarea class="form-control" style="height: 100px" formControlName='product_description'></textarea>
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <label for="inputPassword"  class="col-sm-4 col-form-label">Image</label>
+                      <div class="col-sm-6">
+                        <input type="file" class="form-control"  id="file" 
+                        (change)="handleFileInput($event)">
+                      </div>
+                    </div> -->
+      
+                    <!-- <div class="row mb-3">
+                      <label for="inputText" class="col-sm-4 col-form-label">Available Count</label>
+                      <div class="col-sm-6">
+                        <textarea class="form-control" style="height: 100px" formControlName='product_count'></textarea>
+                      </div>
+                    </div> -->
+      
+                    <!-- <div class="row mb-3">
+                      <label for="inputText" class="col-sm-4 col-form-label">Product Amount</label>
+                      <div class="col-sm-6">
+                        <textarea class="form-control" style="height: 100px" formControlName='product_amount'></textarea>
+                      </div>
+                    </div>
+      
+                    <div class="row mb-3">
+                      
+                      <div class="col-sm-10">
+                        <button type="submit" class="btn btn-primary" (click)="saveProduct()">Save</button>
+                      </div>
+                    </div>
+      
+                  </form>
+      
+                </div>
+              </div>
+              </div>
+              </div>
+        </section>
+      </m!--,ain> -->
+
+
+
+
+
+
+
+
+      <section class="application-form spad">
+        <div class="container">
+
+
+
+            <div class="booking" >
+                <div class="container" >
+                    <div class="row align-items-center" >
+                        <!-- <div class="col-lg-7"> -->
+                            <div class="booking-content" style="text-align:center;">
+                                <div class="section-header">
+                                    <!-- <p>Book A Table</p> -->
+                                    <h2 >Edit Product Registration</h2>
+                                </div>
+                                <div class="about-text">
+                                    
+                                   
+                                </div>
+                            </div>
+                        <!-- </div> -->
+                        <!-- <div class="row"> -->
+                            <!-- <div class="col-lg-3"></div> -->
+                       
+                            <div class="col-lg-10 " >
+                            <div class="booking-form" style="margin-left: 20%;" >
+                                <form [formGroup]='producteditform'>
+                                    <div class="control-group">
+                                        <div class="input-group ">
+                                            <select class="form-control" formControlName="cat_name" > 
+                                                <option value="" > -- Select Category --</option>
+                                                <option *ngFor="let Category of productlist" value="{{Category.catname}}">
+                                                 {{Category.catname}}
+                                                </option>
+                                            </select>
+                                            </div>
+                                        </div>
+                                    
+                                    <div class="control-group">
+                                        <div class="input-group">
+                                            <input type="text"  placeholder =" Product Name"class="form-control" formControlName='product_name'>
+                                            <div class="input-group-append">
+                                                <div class="input-group-text"><i class='fa fa-product-hunt'></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <div class="input-group">
+                                            <textarea class="form-control" placeholder =" Product Description"style="height: 100px" formControlName='product_description'></textarea>
+                                            <div class="input-group-append">
+                                                <div class="input-group-text"><i class='fa fa-audio-description'></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <div class="input-group" >
+                                            <input type="file" class="form-control"  id="file" 
+                        (change)="handleFileInput($event)">
+                                            <div class="input-group-append">
+                                                <div class="input-group-text"><i class='fa fa-image'></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <div class="input-group">
+                                            <textarea class="form-control"  placeholder =" Product count" style="height: 100px" formControlName='product_count'></textarea>
+                                            <div class="input-group-append">
+                                                <div class="input-group-text"><i class='fa fa-plus'></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <div class="input-group">
+                                            <textarea class="form-control" placeholder =" Product Amount" style="height: 100px" formControlName='product_amount'></textarea>
+                                            <div class="input-group-append">
+                                                <div class="input-group-text"><i class='fa fa-bank'></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                    
+                                    <div class="row">
+                                        <div class="col-sm-6"> <input type="submit" (click)="edit()" value="Update"routerLink="/customermaster/mypost"
+                                                class="btn btn-block py-2 btn-primary">
+                                            <a routerLink="/customermaster/mypost">Cancel</a>
+                                        </div>
+                                    </div> <br>
+                                </form>
+                                
+                            </div>
+                        <!-- </div> -->
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+        

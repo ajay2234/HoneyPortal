@@ -1,0 +1,63 @@
+<div class="pagetitle" style="margin-left: 34%;
+    margin-top: 6%;">
+        <h1>Location Registration</h1>
+        <nav>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">Forms</li>
+            <li class="breadcrumb-item active">Location</li>
+          </ol>
+        </nav>
+      </div><!-- End Page Title -->
+    
+      <section class="section" style="margin-top:6%; margin-left:34%">
+        <div class="row">
+          <div class="col-lg-8">
+    
+            <div class="card" style="width: 250%;">
+              <div class="card-body">
+                <!-- <h5 class="card-title">General Form Elements</h5> -->
+    
+                <!-- General Form Elements -->
+                <form [formGroup]="LocationForm">
+                    <div class="row mb-3">
+                        <label for="inputText" class="col-sm-4 col-form-label">District</label>
+                    <select class="form-control"  formControlName="district_id">
+                        <option value="">-- Select District --</option>
+                        <option *ngFor="let Collection_district of districtList" value="{{ Collection_district.dist_name }}">
+                          {{Collection_district.dist_name}}
+                        </option>
+                      </select>
+                    </div>
+                
+                 
+        <div class="row mb-3">
+            <label for="inputText" class="col-sm-4 col-form-label">place</label>
+            <div class="col-sm-6">
+                <input type="text" formControlName="place_name" class="form-control">
+                <label *ngIf="LocationForm.controls['place_name'].errors['required'] && savestatus" class="text-danger">*Enter valid data</label>
+
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label for="inputText" class="col-sm-4 col-form-label">pincode</label>
+            <div class="col-sm-6">
+                <input type="text" formControlName="pincode" class="form-control">
+                <label *ngIf="LocationForm.controls['pincode'].errors['required'] && savestatus" class="text-danger">*Enter valid data</label>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+             <div class="col-sm-10">
+                <button type="submit" class="btn btn-primary" (click)="savePlace()">Save</button>
+            </div>
+        </div> 
+    
+                </form><!-- End General Form Elements -->
+    
+              </div>
+            </div>
+            </div>
+            </div>
+        </section>

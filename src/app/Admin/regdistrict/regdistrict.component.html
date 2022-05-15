@@ -1,0 +1,26 @@
+<div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="margin-left=100px">
+                <div class="card" style="border-radius: 15px;">
+                    <div class="card-body p-5">
+                        <h2 class="text-uppercase text-center mb-5">DISTRICT REGISTRATION</h2>
+
+                        <form [formGroup]="DistrictForm">
+
+                            <div class="form-outline mb-4">
+                                <label class="control-label col-sm-2" for="society">Name</label>
+                                <input type="text" class="form-control" formControlName="dist_name"
+                                    placeholder="Enter District Name" />
+                                    <label *ngIf="DistrictForm.controls['dist_name'].errors['required'] && savestatus" class="text-danger">*Enter valid data</label>
+
+                            </div>
+                            <!-- <label *ngIf="DistrictForm.controls['dist_name'].errors['required'] && savestatus" class="text-danger">*Enter valid data</label> -->
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                <button type="submit" (click)="onsubmit()"   class="btn btn-primary">Register</button>
+                                <a routerLink="/adminmaster/adminhome">Cancel</a>
+
+                    </div>
+                </div>

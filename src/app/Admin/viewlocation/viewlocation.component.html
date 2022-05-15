@@ -1,0 +1,32 @@
+<main id="main" class="main">
+    <div class="card-body">
+        <div class="table-responsive">
+            <div class="row">
+                <div class="col-sm-6">
+                    <button type="submit" class="btn btn-primary" [routerLink]="['/adminmaster/reglocation']">Add New</button>
+                </div>
+            </div>
+            <br>
+            <table class="table student-data-table m-t-20" *ngIf="locationlist">
+                <thead>
+                    <tr>
+                        <th>Sl No</th>
+                        <th>Location Name</th>
+                        <th>District Name</th>
+                       
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let loc of locationlist;let i=index;">
+                        <td>{{ i+1 }}</td>
+                        <td>{{ loc.place_name }}</td>
+                        <td>{{ loc.district_id}}</td>
+                        <td><a [routerLink]="['/adminmaster/editlocation',loc.place_id]"><button class="btn btn-success">Edit</button></a></td>                  
+                        <td><button class="btn btn-danger" (click)="delete(loc.place_id)">Delete</button></td>
+                       
+                    </tr>
+                </tbody>
+            </table>
+        </div>

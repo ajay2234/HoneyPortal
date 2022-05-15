@@ -1,0 +1,34 @@
+<main id="main" class="main">
+    <div class="card-body">
+        <p>No .of Category: {{count}}</p>
+    <div class="table-responsive">
+    <div class="row">
+    <div class="col-sm-6">
+    <!-- <button type="submit" class="btn btn-primary"[routerLink]="['/adminmaster/regcategory']">Add New</button> -->
+    <!-- <a class="btn btn-primary" [routerLink]="['adminmaster/regcategory']" >Add New</a> -->
+    </div>
+    </div>
+    <br>
+    <table class="table student-data-table m-t-20" 
+*ngIf="categorylist">
+<thead>
+<tr>
+<th>Sl No</th>
+<th>Category Name</th>
+<div class="col-md-3">
+
+    <th>Category Description</th>
+</div>
+</tr>
+</thead>
+<tbody>
+<tr *ngFor="let ca of categorylist;let 
+i=index;">
+<td>{{ i+1 }}</td>
+<td>{{ ca.catname }}</td>
+<td style="font-size:14px;">{{ ca.Description }}</td>
+
+</tr>
+</tbody>
+</table>
+</div>
